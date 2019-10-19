@@ -26,7 +26,17 @@ public class Main {
         System.out.println("Jung's Account # : " + jungsAccount.getAccountNumber());
         System.out.println("Jung's Balance : " + jungsAccount.getBalance());
 
-//        BankAccount timsAccount = new BankAccount("Tim", "tim@email.com", "12345");
-//        System.out.println(timsAccount.getAccountNumber() + " name " + timsAccount.getCustomerName());
+        BankAccount timsAccount = new BankAccount("Tim", "tim@email.com", "(000) 987-2345");
+        System.out.println(timsAccount.getAccountNumber() + " => Owner's name of the Account : " + timsAccount.getCustomerName());
+
+        VipCustomer vipJohn = new VipCustomer();
+        System.out.println(vipJohn.getName() + "'s Account info : $" + vipJohn.getCreditLimit() + " limit (" + vipJohn.getEmailAddress() + ")");
+
+        VipCustomer vipCho = new VipCustomer("Cho", 1000.00);
+        System.out.println(vipCho.getName() + "'s Account info : $" + vipCho.getCreditLimit() + " limit (" + vipCho.getEmailAddress() + ")");
+
+        VipCustomer vipLin = new VipCustomer("Lin", 5000.00, "lin@vip.com");
+        System.out.println(vipLin.getName() + "'s Account info : $" + vipLin.getCreditLimit() + " limit (" + vipLin.getEmailAddress() + ")");
+
     }
 }
